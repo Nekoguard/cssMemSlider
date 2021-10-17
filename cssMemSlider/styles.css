@@ -29,11 +29,26 @@ body {
     flex-direction: column;
 }
 
-.mem-slider__slide {
+.mem-slider__slides {
     margin: 0 auto 2.5rem;
     width: 30rem;
     height: 27.5rem;
     overflow: hidden;
+}
+
+.mem-slider__texts {
+    width: 12.5rem;
+    overflow: hidden;
+}
+
+.slides__inner {
+    display: flex;
+    transition: transform .5s ease;
+}
+
+.texts__inner {
+    display: flex;
+    transition: transform .5s ease;
 }
 
 .slide {

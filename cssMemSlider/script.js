@@ -30,11 +30,11 @@ dots.forEach(dot => {
             offset = slidesWidth;
             textOffset = textsWidth;
         } else if (dot.classList.contains('dot3')) {
-            offset = '1200px';
-            textOffset = '500px';
+            offset = `${Number(slidesWidth.slice(0, -2)) * 2}px`;
+            textOffset = `${Number(textsWidth.slice(0, -2)) * 2}px`;
         } else if (dot.classList.contains('dot4')) {
-            offset = '1800px';
-            textOffset = '750px';
+            offset = `${Number(slidesWidth.slice(0, -2)) * 3}px`;
+            textOffset = `${Number(textsWidth.slice(0, -2)) * 3}px`;
         }
 
         dots.forEach(dot => dot.classList.remove('active'));

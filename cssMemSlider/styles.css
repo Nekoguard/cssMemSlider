@@ -81,6 +81,14 @@ body {
     transition: border-color .2s ease, background-color .2s ease;
 }
 
+.mem-slider__dot::after {
+    content: "";
+    height: 200%;
+    width: 100%;
+    display: block;
+    background: transparent;
+}
+
 .mem-slider__dot:hover,
 .mem-slider__dot:active {
     border-color: #fff6eb;

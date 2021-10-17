@@ -1,0 +1,151 @@
+/* Reset */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+/* Styles */
+
+html {
+    font-size: 20px;
+}
+
+body {
+    background-color: #333333;
+}
+
+.mem-slider {
+    max-width: 60%;
+    margin: 2.5rem auto 0;
+    padding: 2rem 1rem;
+    background-color: burlywood;
+    border-radius: 1rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.mem-slider__slides {
+    margin: 0 auto 2.5rem;
+    width: 30rem;
+    height: 27.5rem;
+    overflow: hidden;
+}
+
+.mem-slider__texts {
+    width: 12.5rem;
+    overflow: hidden;
+}
+
+.slides__inner {
+    display: flex;
+    transition: transform .5s ease;
+}
+
+.texts__inner {
+    display: flex;
+    transition: transform .5s ease;
+}
+
+.slide {
+    max-width: 30rem;
+    height: auto;
+    display: block;
+}
+
+.mem-slider__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mem-slider__text {
+    font-size: 1.2rem;
+}
+
+.mem-slider__dots {}
+
+.mem-slider__dot {
+    margin: 0 0 0 10px;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #333333;
+    border-radius: 50%;
+    background-color: #333333;
+    cursor: pointer;
+
+    transition: border-color .2s ease, background-color .2s ease;
+}
+
+.mem-slider__dot::after {
+    content: "";
+    height: 200%;
+    width: 100%;
+    display: block;
+    background: transparent;
+}
+
+.mem-slider__dot:hover,
+.mem-slider__dot:active {
+    border-color: #fff6eb;
+    background-color: #fff6eb;
+}
+
+.active,
+.active:hover,
+.active:active {
+    background-color: transparent;
+}
+
+@media (max-width: 1100px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 850px) {
+    html {
+        font-size: 10px;
+    }
+
+    .mem-slider__dot {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+@media (max-width: 560px) {
+    .mem-slider {
+        max-width: 90%;
+        margin: 2rem auto 0;
+    }
+
+    .mem-slider__slides {
+        margin: 0 auto;
+        width: 25rem;
+        height: 25rem;
+    }
+
+    .mem-slider__texts {
+        margin: 2rem 0 0;
+        width: 100%;
+    }
+
+    .mem-slider__content {
+        flex-direction: column-reverse;
+    }
+
+    .text {
+        font-size: 1.5rem;
+    }
+
+    .mem-slider__dot {
+        width: 13px;
+        height: 13px;
+        border: 2px solid #333333;
+    }
+}
